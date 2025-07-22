@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liberation - MT</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;     /* Stack items vertically */
+      align-items: center;        /* Center them horizontally */
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      /* Centers the grid container */
+    }
+
+    .moodTile {
+      display: flex;
+      justify-content: center;    /* Center the grid container */
+      align-items: center;        /* Center the grid container vertically */
+      width: 100vw;
+      height: 100vh;
+      background-color: #f0f0f0; /* Light background for contrast */
+    }
+
+    .container {
+      height: 800px;
+      width: 800px;
+      display: grid;
+      background-color: #000;
+      grid-template-columns: 0.2fr 1fr 0.85fr;
+      grid-template-rows: 1fr 1.2fr 0.9fr;
+      gap: 0px;
+
+      font-size: 1em;
+      transform: scale(.85);
+      /* Using scale to adjust the size of the grid AND text */
+    }
+
+    .rose {
+      display: flex;
+      align-items: flex-end;
+      background-color: #c74153;
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+    }
+
+    .gray {
+      background-color: #84928b;
+      grid-row: 2 / 4;
+      grid-column: 1 / 2;
+    }
+
+    .gold {
+      background-color: #fddc63;
+      grid-row: 2 / 3;
+      grid-column: 2 / -1;
+    }
+
+    .charcoal {
+      background-color: #313935;
+      grid-row: 3 / 4;
+      grid-column: 2 / 3;
+    }
+
+    .sageGreen {
+      background-color: #b2c8bb;
+      grid-row: 3 / 4;
+      grid-column: 3 / -1;
+    }
+
+    .rose > p {
+      /* Positions the text in that particular area within .rose */
+      position: relative;
+      top: 4%;
+      left: 50%;
+      margin: 0px;
+      padding: 0px;
+      color: #fedc60;
+      font-size: 2.6em;
+      font-weight: 600;
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    @media (max-width: 1350px) {
+      .container {
+        transform: scale(.8);
+        /* Scale down grid on medium screens */
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        transform: scale(.7);
+        /* Scale down grid on small screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        transform: scale(.6);
+        min-width: 480px;
+        /* Scale down grid on extra small screens */
+      }
+    }
+
+    /* Stil trying to figure out a way to size down text without step-wising it with @media queries */
+  </style>
+</head>
+
+<body>
+
+  <div class="moodTile">
+    <div class="container">
+      <div class="item rose">
+        <p>liberation</p>
+      </div>
+      <div class="item gray"></div>
+      <div class="item gold"></div>
+      <div class="item charcoal"></div>
+      <div class="item sageGreen"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
