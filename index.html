@@ -6,38 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liberation — MT</title>
   <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      /* Centers the grid container */
-    }
-
-    .moodTile {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      height: 100vh;
-      background-color: #f0f0f0; /* Light background for contrast */
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: 0.2fr 1fr 0.85fr;
-      grid-template-rows: 1fr 1.2fr 0.9fr;
-      gap: 0px;
-      height: 800px;
-      width: 800px;
-      font-size: 1em;
-      transform: scale(.85); /* Using scale to adjust the size of the grid AND text */
-      background-color: #000;
-      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.35), 0 1.5px 6px 0 rgba(0,0,0,0.18);
-    }
-
+    /* This is for the specific formatting of the mood tile */
     .rose {
       display: flex;
       align-items: flex-end;
@@ -81,84 +50,9 @@
       font-weight: 600;
       font-family: 'Helvetica', sans-serif;
     }
-
-    .description-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 750px;
-      text-align: left;
-      font-family: 'Open Sans', sans-serif;
-      color: #3a3a3a;
-    }
-
-    .description-container p, pre {
-      color: #363737;
-      font-family: 'Spectral', serif;
-      font-size: 1.2em;
-      line-height: 1.6;
-    }
-
-    .description {
-      width: 600px;
-    }
-
-    .description h1 {
-      font-weight: 800;
-      font-size: 2.5em;
-      text-align: center;
-    }
-
-    .journal h2 {
-      margin-top: 0;
-      font-size: 2.2em;
-      font-weight: 750;
-    }
-
-    hr {
-      margin: 2em 0em 2em 0em;
-      border: none;
-      border-top: 1px solid #e6e6e6;
-      width: 100%;
-    }
-
-    pre {
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      overflow-x: hidden;
-    }
-
-    @media (max-width: 1350px) {
-      .container {
-        transform: scale(.8); /* Scale down grid on medium screens */
-      }
-    }
-
-    @media (max-width: 840px) {
-      .description-container p, pre {
-        font-size: 1.1em;
-        line-height: 1.6;
-      }
-
-      .description-container, .description, .journal{
-        width: 95%;
-        min-width: auto; /* lift the min-width so it can actually shrink */
-      }
-
-      .container {
-        transform: scale(.7); /* Scale down grid on small screens */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        transform: scale(.6); /* Scale down grid on extra small screens */
-        min-width: 480px;
-      }
-    }
-    /* Stil trying to figure out a way to size down text without step-wising it with @media queries */
   </style>
-
+  
+  <!-- Preconnect to Google Fonts for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -166,6 +60,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Link to the main stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
@@ -207,7 +105,7 @@
         Visually, and emotionally, because the word relates to freedom, I think communicating the sense that structures were being dismantled would be appropriate for the aesthetics. And with the colors, arguably the most immediate part of any visual work, I needed to demonstrate some causal, contrasting relationship between the lighter tones and the more brooding ones.
       </p>
       <p>
-        And to do so, I thought the brighter, lifting tones should occupy more proportional area than the darker ones. Since then, it wouldn't simply feel like it's "bright" — all the time. There should be enough light to dominate the picture — even if it's like a 60:40 ratio — but not so much that it feels like it's simply spacious, or without tension. Since, considering the word, it's that very tension — the tugging between two opposing forces — that correspond to the weightyness of liberation.
+        And to do so, I thought the brighter, lifting tones should occupy more proportional area than the darker ones. Since then, it wouldn't feel like it's "bright" all the time. There should be enough light to dominate the picture — even if it's like a 60:40 ratio — but not so much that it feels like it's super spacious, or without tension. Since, considering the word, it's that very tension — the tugging between two opposing forces — that match to the weightyness of liberation.
       </p>
       <p>
         On the topic of proportions and area: shapes themselves and how we organize them are integral to delivering the right message. And after some tinkering and testing, I figured that having a loud strip of color that goes the entire row would look good on top. In this case, the rosy-red was that strip, and it, alongside the yellow, become a sort of blanket that rests upon the darker colors. And that overlaying organziation can suggest a lot.
