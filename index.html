@@ -122,6 +122,12 @@
       width: 100%;
     }
 
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-x: hidden;
+    }
+
     @media (max-width: 1350px) {
       .container {
         transform: scale(.8); /* Scale down grid on medium screens */
@@ -129,13 +135,13 @@
     }
 
     @media (max-width: 840px) {
-      .description-container p {
+      .description-container p, pre {
         font-size: 1.1em;
         line-height: 1.6;
       }
 
-      .description-container, .description {
-        width: 90%;
+      .description-container, .description, .journal{
+        width: 95%;
         min-width: auto; /* lift the min-width so it can actually shrink */
       }
 
@@ -147,6 +153,7 @@
     @media (max-width: 480px) {
       .container {
         transform: scale(.6); /* Scale down grid on extra small screens */
+        min-width: 480px;
       }
     }
     /* Stil trying to figure out a way to size down text without step-wising it with @media queries */
